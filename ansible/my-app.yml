@@ -1,0 +1,39 @@
+---
+- name: Deploy My Application
+  hosts: location
+  become: yes
+
+  vars:
+    app_url: "https://github.com/Akash1738/ansible-project.git"
+    app_path: "/var/www/html/myapp"
+
+  tasks:
+
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present
+        update_cache: yes
+
+    - name: Clone application repository
+      git:
+        repo: "{{ app_url }}"
+        dest: "{{ app_path }}"
+        version: main
+
+    - name: Copy application files to nginx directory
+      copy:
+        src: "{{ app_path }}/"
+        dest: /var/www/html/
+        remote_src: yes
+
+    - name: Start and enable nginx
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: Restart nginx
+      service:
+        name: nginx
+        state: restarted

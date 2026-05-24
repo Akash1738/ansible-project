@@ -1,0 +1,2 @@
+[location]
+13.207.88.38 ansible_user=ubuntu ansible_ssh_private_key_file=~/akash-01.pem
