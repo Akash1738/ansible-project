@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #0f172a;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+h1 {
+    font-size: 55px;
+    color: #38bdf8;
+}
+
+h2 {
+    font-size: 35px;
+    color: #facc15;
+}
+
+p {
+    width: 60%;
+    margin: auto;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.skills {
+    margin-top: 30px;
+}
+
+.skills span {
+    display: inline-block;
+    background: #1e293b;
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 8px;
+    border: 1px solid #38bdf8;
+}
+
+button {
+    margin-top: 40px;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background: #38bdf8;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #0ea5e9;
+}
+
+#message {
+    margin-top: 30px;
+    color: #22c55e;
+}
