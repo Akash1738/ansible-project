@@ -1,9 +1,8 @@
-FROM node:18
+FROM nginx:latest
 
-WORKDIR /app
+COPY index.html /usr/share/nginx/html/
+COPY style.css /usr/share/nginx/html/
+COPY script.js /usr/share/nginx/html/
 
-COPY . .
+EXPOSE 80
 
-EXPOSE 3000
-
-CMD ["node", "app.js"]
